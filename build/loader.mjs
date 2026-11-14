@@ -5,14 +5,12 @@ import fs from 'node:fs/promises';
 export async function load(url, context, nextLoad) {
   if (path.extname(url) === '.yml') {
     try {
-      const source = await fs.readFile(new URL(url), 'utf-8');
-      const parsed = yaml.parse(source);
-      const result = `export default ${JSON.stringify(parsed)};`;
+      const source = await fs.readFile(new URL(url), 'utf-8'); // utf-8 тк по умолчанию при чтении возвращается buffer
 
       return {
-        format: 'module',
+        format: 'json',
         shortCircuit: true,
-        source: result,
+        source: JSON.stringify(yaml.parse(source)),
       };
     } catch (err) {
       err.message = `[${url}] ${err.message}`;

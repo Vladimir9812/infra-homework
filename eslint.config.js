@@ -3,9 +3,10 @@ import { BUILD_VARIABLES } from './build/const/webpack.js';
 
 export default [
   {
+    files: ["src/*.js"],
     plugins: { infra },
     rules: {
-      "infra/strict-const": ['off']
+      "infra/strict-const": ['error', Object.keys(BUILD_VARIABLES)]
     }
   }
 ];

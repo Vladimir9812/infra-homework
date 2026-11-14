@@ -44,3 +44,7 @@ if (globalThis.IS_STAGE) {
 [Eslint rule tutorial](https://eslint.org/docs/latest/extend/custom-rules)
 
 [Source Code API](https://eslint.org/docs/latest/extend/custom-rules#accessing-the-source-code)
+
+-----------
+
+✅ Сделано

@@ -27,18 +27,20 @@ async function test() {
     client = await CDP();
     console.log('Connected to chrome');
 
-    const { Network, Page } = client;
+    const { Network, Page, Runtime } = client;
 
     // Включаем Network и Page
     await Network.enable();
     await Page.enable();
 
     // Нужно перейти на localhost:3000, дождаться инициализации DOM и вызвать нужные команды
-    await Page.navigate({ url: '' });
+    await Page.navigate({ url: 'http://localhost:3000' });
     await Page.loadEventFired();
     await client.DOM.enable();
 
-    const result = '?';
+    const script = `document.getElementById('root').textContent`;
+    const evaluated = await Runtime.evaluate({ expression: script });
+    const result = evaluated.result.value;
 
     assert.equal(result, expected);
 

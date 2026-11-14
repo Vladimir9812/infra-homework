@@ -7,3 +7,8 @@
 ## Подсказки
 
 [Yaml quickref](https://quickref.me/yaml)
+
+-----------
+
+✅ Сделано
+

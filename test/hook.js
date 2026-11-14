@@ -9,6 +9,6 @@ const expectedOutput = [
   'Structure of component list is broken! Missing index.js'
 ];
 
-exec(`bash ${preCommitPath}`, (_err, stdout) => {
+exec(`bash ${preCommitPath}`, (err, stdout) => {
   assert.deepEqual(stdout.split('\n').filter(Boolean), expectedOutput);
 });

@@ -29,3 +29,7 @@ API CDP обернуто в простую библиотеку [chrome-remote-i
 [Chrome DevTools Runtime](https://chromedevtools.github.io/devtools-protocol/tot/Runtime/)
 
 [Chrome Remote Interface](https://github.com/cyrus-and/chrome-remote-interface?tab=readme-ov-file)
+
+-----------
+
+✅ Сделано
