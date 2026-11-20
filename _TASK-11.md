@@ -19,3 +19,7 @@
 Настройте Minikube чтобы до пода можно было достучаться снаружи (внутри контейнера нода просто отдает hello world).
 
 [Minikube accessing apps](https://minikube.sigs.k8s.io/docs/handbook/accessing/)
+
+-----------
+
+✅ Сделано

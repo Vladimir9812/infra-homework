@@ -13,6 +13,7 @@ const fetchOpts = {
 };
 
 app.get('/', async (req, res) => {
+  console.log({ process: process.env })
   const userResponse = await fetch(`https://course.gitlab.yandexcloud.net/api/v4/users?search=${USERNAME}`, fetchOpts);
   const user = await userResponse.json();
 
